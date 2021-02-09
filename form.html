@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>GaartenKaart</title>
+        <script
+            defer
+            src="{{url_for('Scripting', filename='javapage.js')}}"
+            type="module"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="{{url_for('Scripting', filename='styles.css')}}"
+        />
+    </head>
+
+    <body>
+        <h1>GaartenKaart</h1>
+	
+        <form action="/fileserv.php">
+		<p>Please fill out both fields and press the button.</p>
+		<label for="email">Email Address</label>
+		<input type="field" id="email" name="email"></input><br>
+    		<label for="OSMuser">OSM User Name</label>
+		<input type="field" id="user" name="user"></input><br><br>
+        	<input type="submit" value="Let's Go!" onclick="/confirm.html"/>
+        </form>
+    </body>
+</html>
