@@ -18,13 +18,13 @@
     <body>
         <h1>DIG</h1>
 	
-        <form action="/runReportWV.py">
+        <form method="get" action="https://dig-6oypx.ondigitalocean.app/runReportWV.py">
 		<p>Please fill out both fields and press the button.</p>
 		<label for="email">If you would like your results emailed to you. Please provide your email address.</label><br>
 		<input type="field" id="email" name="email"></input><br>
     		<label for="OSMuser">OSM User Name</label>
 		<input type="field" id="user" name="user"></input><br><br>
-        	<input type="submit" value="Let's Go!" onclick="/runReportWV.py"/>
+        	<input type="submit" value="Let's Go!"/>
         </form>
     </body>
 </html>
