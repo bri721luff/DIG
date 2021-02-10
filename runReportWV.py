@@ -28,3 +28,19 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+# Part 1 Definitions
+user = userFromForm
+chromedriver = "C:\Program Files\Google\Chrome\Application\chromedriver.exe"
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("user-data-dir=C:\\dev-app2")
+driver = webdriver.Chrome(chromedriver, chrome_options=chrome_options)
+# Gets Overpass API
+driver.get('https://lz4.overpass-api.de/query_form.html')
+# Waits for it to load
+driver.implicitly_wait(1000)
+# Enters query into field and returns file
+actions = ActionChains(driver)
+form = driver.find_element_by_xpath("//form/p/textarea[@name='data']")
+actions.move_to_element(to_element=form).click().perform()
+actions.send_keys('[out:csv(::id,::type,::user,::timestamp;true;",")];nwr(user:'+user+');out meta;\ue004\ue006').click().perform()    
