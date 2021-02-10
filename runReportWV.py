@@ -30,7 +30,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 # Part 1 Definitions
-user = userFromForm
+user = VLD168
 chromedriver = "C:\Program Files\Google\Chrome\Application\chromedriver.exe"
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("user-data-dir=C:\\dev-app2")
