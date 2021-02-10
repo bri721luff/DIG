@@ -6,19 +6,19 @@
         <title>DIG</title>
         <script
             defer
-            src="{{url_for('Scripting', filename='javapage.js')}}"
+            src="{{url_for('Static', filename='javapage.js')}}"
             type="module"
         ></script>
         <link
             rel="stylesheet"
-            href="{{url_for('Scripting', filename='styles.css')}}"
+            href="{{url_for('Static', filename='styles.css')}}"
         />
     </head>
 
     <body>
         <h1>DIG</h1>
 	
-        <form method="get" src="https://dig-6oypx.ondigitalocean.app/runReportWV.py">
+        <form method="get">
 		<p>Press the button to run the report.</p>
         	<input type="submit" value="Let's Go!"/>
         </form>
