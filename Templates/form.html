@@ -9,9 +9,17 @@
     <body>
         <h1>DIG</h1>
 	
-        <form method="get">
-		<p>Press the button to run the report.</p>
-        	<input type="submit" value="Let's Go!"/>
-        </form>
+        <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+	    
+	<script>
+		function goPython(){
+			$.ajax({
+				url: "runReportWV.py",
+				context: document.body
+			}).done(function() {
+				alert('finished python script');;
+				});
+		}
+	    </script>
     </body>
 </html>
