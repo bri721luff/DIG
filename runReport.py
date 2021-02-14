@@ -19,9 +19,8 @@ import pandas as pd
 # Part 1
 # Definitions
 user = 'VLD168'
-chromedriver = "C:\Program Files\Google\Chrome\Application\chromedriver.exe"
+chromedriver = "chromedriver.exe"
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("user-data-dir=C:\\dev-app2")
 driver = webdriver.Chrome(chromedriver, chrome_options=chrome_options)
 # Gets Overpass API
 driver.get('https://lz4.overpass-api.de/query_form.html')
@@ -39,7 +38,7 @@ driver.close()
 # Definitions
 fWA = 'OldNews'+user+'.csv' #Filepath of second DL file in chain
 fWB = 'NewNews'+user+'.csv' #Filepath of first DL file in chain
-fWC = 'C:\\Users\\Brian\\Downloads\interpreter' #Filepath of current DL file, does not come with suffix
+fWC = 'interpreter' #Filepath of current DL file, does not come with suffix
 fWD = 'LeastRecent'+user+'Results.csv' #Filepath of old report
 fWE = 'MostRecent'+user+'Results.csv' #Filepath of newest report
 ON = Path(fWA)
