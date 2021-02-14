@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import chromedriver_binary
 
 # Part 2 Script Packages
 import time
@@ -19,8 +20,7 @@ import pandas as pd
 # Part 1
 # Definitions
 user = 'VLD168'
-cd = '\chromedriver.exe'
-chromedriver = Path(cd)
+chromedriver = 'chromedriver.exe'
 chrome_options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(chromedriver, chrome_options=chrome_options)
 # Gets Overpass API
