@@ -19,7 +19,8 @@ import pandas as pd
 # Part 1
 # Definitions
 user = 'VLD168'
-chromedriver = "chromedriver.exe"
+cd = 'chromedriver.exe'
+chromedriver = Path(cd)
 chrome_options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(chromedriver, chrome_options=chrome_options)
 # Gets Overpass API
