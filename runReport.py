@@ -2,6 +2,7 @@
 # coding: utf-8
 
 # Part 1 Script Packages
+import os
 import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
