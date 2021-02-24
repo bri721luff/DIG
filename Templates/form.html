@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>DIG</title>
+    </head>
+
+    <body>
+        <h1>DIG</h1>
+	
+        <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+	 
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	
+	<script>
+		function goPython(){
+			$.ajax({
+				url: "https://dig-6oypx.ondigitalocean.app/Templates/runReportWV.py",
+				context: document.body
+			}).done(function() {
+				alert('finished python script');;
+				});
+		}
+	    </script>
+    </body>
+</html>
